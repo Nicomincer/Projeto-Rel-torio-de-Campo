@@ -10,6 +10,20 @@ def limpar():
     colocar_hora.delete(0, END)
     colocar_publicações.delete(0, END)
 
+def conectar():
+    global banco_de_dados, cursor
+    banco_de_dados = sqlite3.connect("horasdecampo.bd")
+    cursor = banco_de_dados.cursor()
+    cursor.execute("""CREATE TABLE IF NOT EXISTS relatorio(
+        Nome CHAR(40) NOT NULL,
+        Horas INTEGER (20),
+        Publicações INTEGER (20),
+        Estudos INTEGER(20)
+    );"""
+    )
+    banco_de_dados.close()
+
+conectar()
 programa = tkinter.Tk("Relátorio")
 programa.title("Tela")
 programa.configure(background="lightblue")
