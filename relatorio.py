@@ -132,5 +132,4 @@ barra_de_rolagem = Scrollbar(frame_arvore, orient='vertical')
 anotações_do_campo.configure(yscroll=barra_de_rolagem)
 barra_de_rolagem.place(relx=0.96, rely=0.1, relwidth=0.04, relheight=0.85)
 
-
 programa.mainloop()
