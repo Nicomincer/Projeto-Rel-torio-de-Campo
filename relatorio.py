@@ -40,7 +40,7 @@ def add():
     publicações = colocar_publicações.get()
     if len(nome) != 0:
         cursor.execute(f""" INSERT INTO relatorio(Nome, Horas, Publicações, Estudos) VALUES (?, ?, ?, ?)
-        """, (nome, estudos, horas, publicações))
+        """, (nome, horas, estudos, publicações))
         banco_de_dados.commit()
         fechar()
         select()
