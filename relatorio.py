@@ -12,7 +12,7 @@ def montar_tabela():
     cursor = banco_de_dados.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS relatorio(
         Nome CHAR(40) NOT NULL,
-        Horas INTEGER (20),
+        Horas FLOAT (20),
         Publicações INTEGER (20),
         Estudos INTEGER(20)
     );"""
